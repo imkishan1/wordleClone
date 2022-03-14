@@ -235,9 +235,11 @@
   max-height: 300px;
   height:fit-content !important;
   position: absolute;
-  background-color: #9239db88;
+  background-color: rgba(58, 58, 58, 0.507);
+  color: $bg-light-blank !important;
   backdrop-filter: blur(1px);
-  padding: 1.3rem;
+  padding: 1.3rem 2.8rem 1.3rem 1.3rem;
+  // padding-right: 2rem;
   z-index: 1000;
   top: 50%;
   right:50%;
@@ -246,17 +248,23 @@
   border-radius: .5rem;
   transition: 0.3s all ease-in-out;
   animation: motionSize 0.5s alternate;
-  
+  p{
+    font-size: 2rem !important;
+    word-spacing: 1px;
+    line-height: normal;
+    letter-spacing: 1px;
+  }  
     .svg-icon{
       position: absolute;
       right:0;
       top: 10%;
       transform: translateX(-10px);
-      color: $bg-light-blank;
+      color: #fff;
+      // color: grey;
       font-size: 2rem !important;
       font-weight: bold !important;
-      width: 25px;
-      height: 25px;
+      width: 30px;
+      height: 30px;
       cursor: pointer;
     }
     p{
@@ -357,5 +365,9 @@ footer{
 .key-container button:nth-child(11) {
   margin-left: 0;
 }
+
+.hint-text{
+  max-width: 340px;
+  }
 }
 
