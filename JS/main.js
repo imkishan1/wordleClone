@@ -8,6 +8,21 @@ const confeti =  document.querySelector('.confeti');
 const clickToClose = document.querySelector('.close-buttton');
 const hintMainContainer = document.querySelector('.hint-text');
 const reloads = document.querySelector('#refresh');
+// let highScore=0;
+
+// var today = new Date();
+
+// var date = (today.getFullYear())+'-'+(today.getMonth())+'-'+(today.getDate())+'/'+(today.getHours())+':'+(today.getMinutes())+':'+(today.getSeconds());
+// let localDataFetched = JSON.parse(localStorage.getItem("myObj"))
+// let fetchedScore = localDataFetched.score
+// let wordleSocre = {
+//     score: 0,
+//     lastLogin: date
+// }
+// wordleSocre.score = fetchedScore;
+// let stringifyScore = JSON.stringify(wordleSocre);
+
+
 
 reloads.addEventListener('click',() => {
 
@@ -37,7 +52,7 @@ function getMeaning(wordMeaning)
         const resSize = Object.keys(result).length;
         const meanSize = Object.keys(result[resSize-1].meanings).length;
         const defiSize = Object.keys(result[resSize-1].meanings[meanSize-1].definitions).length;
-        wordleMeaningText = result[resSize-1* Math.random() | 0].meanings[meanSize* Math.random() | 0].definitions[defiSize* Math.random() | 0].definition + ` And the word contains ${wordle[wordle.length * Math.random() | 0]}`;
+        wordleMeaningText = result[resSize-1* Math.random() | 0].meanings[meanSize* Math.random() | 0].definitions[defiSize* Math.random() | 0].definition + `💡Hint: The word contains letter '${wordle[wordle.length * Math.random() | 0]}'`;
         const div = document.createElement('p')
         div.textContent = wordleMeaningText;
         hintMainContainer.append(div);
@@ -179,6 +194,8 @@ const checkRow = () =>{
         {
             card.classList.add('confeti');
             winAudio.play();
+            // fetchedScore = fetchedScore+100;
+            // localStorage.setItem("myObj",stringifyScore);
            showmessage('Yay! You Guessed it right 🥳')
            isGameOver = true;
            return;
@@ -257,3 +274,12 @@ guessWhat.forEach(guess=>{
 
 winAudio = new Audio('/assests/mixkit-video-game-win-2016.wav');
 looseAudio = new Audio('/assests/mixkit-falling-game-over-1942.wav');
+
+
+
+
+
+// console.log(localStorage)
+
+
+// console.log(fetchedScore)

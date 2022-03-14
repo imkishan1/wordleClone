@@ -119,6 +119,7 @@
 }
 
 .key-container button:nth-child(28):hover {
+  margin-top: .5rem !important;
   background-color: rgba(60, 235, 118, 0.288) !important;
 }
 
@@ -174,7 +175,7 @@
 }
 
 .grey {
-  background-color: grey !important;
+  background-color: rgba(128, 128, 128, 0.281) !important;
   color: #fff !important;
 }
 
