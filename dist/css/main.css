@@ -251,7 +251,7 @@
           flex-direction: column;
   right: 0;
   top: 0;
-  color: #fff !important;
+  color: rgba(255, 255, 255, 0.575) !important;
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
 }
@@ -267,6 +267,12 @@
   width: 25px;
   height: 25px;
   cursor: pointer;
+  -webkit-transition: 0.25s all ease-in-out;
+  transition: 0.25s all ease-in-out;
+}
+
+.flex-box .hint svg:hover {
+  color: white !important;
 }
 
 .hint-text {
