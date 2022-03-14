@@ -109,7 +109,7 @@
   padding: 0;
 }
 
-.key-container button:nth-child(28) {
+.key-container button:nth-child(20) {
   padding: 0;
   line-height: 20px;
 }
@@ -118,11 +118,11 @@
   margin-left: 2.6rem;
 }
 
-.key-container button:nth-child(20):hover {
+.key-container button:nth-child(28):hover {
   background-color: rgba(60, 235, 118, 0.288) !important;
 }
 
-.key-container button:nth-child(28):hover {
+.key-container button:nth-child(20):hover {
   background-color: rgba(235, 60, 60, 0.288) !important;
 }
 
