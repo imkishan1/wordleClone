@@ -435,7 +435,7 @@ footer .credits p {
     height: 35px;
   }
   .key-container button:nth-child(11) {
-    margin-left: 0;
+    margin-left: 0.5rem;
   }
   .hint-text {
     max-width: 340px;
