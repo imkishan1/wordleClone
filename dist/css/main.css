@@ -1,0 +1,511 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.card-container {
+  max-width: 489px;
+  width: 100%;
+  min-height: 400px;
+  height: 100%;
+  position: relative;
+}
+
+.card-container .card-container-title {
+  text-align: center;
+  font-size: 6rem;
+  font-family: "Pacifico", cursive;
+  color: #fff;
+}
+
+.card-container .container-box-grid {
+  position: relative;
+  max-width: 350px;
+  min-height: 300px;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  margin-bottom: 3.5rem;
+}
+
+.card-container .container-box-grid.grid .rowElement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+.card-container .container-box-grid.grid .rowElement .columnElement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #272522;
+  margin: 0.7rem;
+  max-width: 45px;
+  max-height: 45px;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border-radius: 50%;
+  color: #8A8F80;
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+.key-container {
+  max-width: 489px;
+  width: 100%;
+  min-height: 150px;
+  height: 100%;
+  margin: 0 auto;
+  z-index: 8;
+}
+
+.key-container button {
+  position: relative;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  font-size: 2rem;
+  margin: 0.4rem;
+  background-color: rgba(255, 255, 255, 0.288);
+  padding: 1rem;
+  width: 40px;
+  height: 40px;
+  border-radius: 0.4rem;
+  text-align: center;
+  cursor: pointer;
+  z-index: 9;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  color: #272522;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  font-weight: bold;
+}
+
+.key-container button:hover {
+  background-color: rgba(255, 255, 255, 0.488);
+}
+
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+  width: 65px;
+  color: black;
+  font-size: 1.6rem !important;
+  padding: 0;
+}
+
+.key-container button:nth-child(28) {
+  padding: 0;
+  line-height: 20px;
+}
+
+.key-container button:nth-child(11) {
+  margin-left: 2.6rem;
+}
+
+.key-container button:nth-child(20):hover {
+  background-color: rgba(60, 235, 118, 0.288) !important;
+}
+
+.key-container button:nth-child(28):hover {
+  background-color: rgba(235, 60, 60, 0.288) !important;
+}
+
+.blank-tile {
+  background-color: #1B1918;
+}
+
+.message-container {
+  height: 0px;
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  -webkit-transition: 0.25s all ease-in;
+  transition: 0.25s all ease-in;
+}
+
+.message-container p {
+  margin: 0;
+  background-color: rgba(204, 204, 204, 0.2);
+  color: #ececec;
+  border-radius: .5rem;
+  padding: .8rem;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 500;
+  -webkit-animation: fade-in 0.5s ease-in-out;
+          animation: fade-in 0.5s ease-in-out;
+}
+
+.green {
+  background-color: rgba(144, 0, 227, 0.918) !important;
+  color: #fff !important;
+}
+
+.yellow {
+  background-color: #272523 !important;
+  color: #fff !important;
+}
+
+.grey {
+  background-color: grey !important;
+  color: #fff !important;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.flip {
+  -webkit-animation: 0.2s linear flipping;
+          animation: 0.2s linear flipping;
+}
+
+@-webkit-keyframes flipping {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    translate: rotateX(0deg);
+  }
+}
+
+@keyframes flipping {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+  }
+  50% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg);
+  }
+  100% {
+    translate: rotateX(0deg);
+  }
+}
+
+.svg-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.flex-box {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  right: 0;
+  top: 0;
+  color: #fff !important;
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
+}
+
+.flex-box .hint {
+  z-index: 100000;
+  cursor: pointer;
+  -webkit-transition: 0.25s all ease;
+  transition: 0.25s all ease;
+}
+
+.flex-box .hint svg {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hint-text {
+  display: none;
+  max-width: 600px;
+  max-height: 300px;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  position: absolute;
+  background-color: #9239db88;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 1.3rem;
+  z-index: 1000;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: .5rem;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-animation: motionSize 0.5s alternate;
+          animation: motionSize 0.5s alternate;
+}
+
+.hint-text .svg-icon {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  color: #1B1918;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hint-text p {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+@-webkit-keyframes motionSize {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  50% {
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes motionSize {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  50% {
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@-webkit-keyframes motionSizeDecrease {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  50% {
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+@keyframes motionSizeDecrease {
+  0% {
+    height: 0%;
+    width: 0%;
+  }
+  50% {
+    height: 50%;
+    width: 50%;
+  }
+  100% {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+footer {
+  z-index: 100000;
+  padding: 1.6rem 0;
+}
+
+footer .credits {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+footer .credits p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #1B1918;
+}
+
+@media screen and (max-width: 500px) {
+  .key-container {
+    text-align: center;
+    max-width: 489px;
+    width: 100%;
+    min-height: 150px;
+    height: 100%;
+    margin: 0 auto;
+    z-index: 8;
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .key-container button {
+    font-size: 1.6rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 35px;
+    height: 35px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .key-container {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
+  }
+  .key-container button {
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    padding: 1rem;
+    width: 30px;
+    height: 30px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-family: 'Archivo', sans-serif;
+  font-size: 62.5%;
+}
+
+body {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  -webkit-animation: gradient 15s ease infinite;
+          animation: gradient 15s ease infinite;
+  color: #272522;
+  -webkit-transition: background-color .25s, color .25;
+  transition: background-color .25s, color .25;
+}
+
+.conatiner {
+  max-width: 1600px;
+  width: 100%;
+  padding: 0rem 1rem;
+}
+
+.conatiner-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.conatiner-size {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.confeti {
+  background: url("/assests/confetti-40.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1000;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */

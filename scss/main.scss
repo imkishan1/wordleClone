@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import './variables';
+@import './cardContainer';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Archivo', sans-serif;
+    // font-family: 'Pacifico', cursive;
+    font-size: 62.5%;
+
+}
+
+body{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    color: $color-light-text;
+    transition: background-color .25s, color .25;
+}
+.conatiner{
+    max-width: 1600px;
+    width: 100%;
+    padding: 0rem 1rem;
+}
+
+.conatiner-flex {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.conatiner-size {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.confeti{
+    background: url('/assests/confetti-40.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    // position: absolute;
+    z-index: 1000;
+    // transition: 0.5s all ease;
+
+}
+
+
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
