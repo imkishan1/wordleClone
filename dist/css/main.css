@@ -112,19 +112,11 @@
 .key-container button:nth-child(20) {
   padding: 0;
   line-height: 20px;
+  margin-top: 0;
 }
 
 .key-container button:nth-child(11) {
   margin-left: 2.6rem;
-}
-
-.key-container button:nth-child(28):hover {
-  margin-top: .5rem !important;
-  background-color: rgba(60, 235, 118, 0.288) !important;
-}
-
-.key-container button:nth-child(20):hover {
-  background-color: rgba(235, 60, 60, 0.288) !important;
 }
 
 .blank-tile {
@@ -155,8 +147,8 @@
   margin: 0;
   background-color: rgba(204, 204, 204, 0.2);
   color: #ececec;
-  border-radius: .5rem;
-  padding: .8rem;
+  border-radius: 0.5rem;
+  padding: 0.8rem;
   text-align: center;
   font-size: 1.6rem;
   font-weight: 500;
@@ -296,7 +288,7 @@
           transform: translate(50%, -50%);
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
   -webkit-animation: motionSize 0.5s alternate;
