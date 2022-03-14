@@ -342,16 +342,19 @@ footer{
   
   
 .key-container {
-  transform: scale(.9);
+  transform: scale(1);
 
   button {
     font-size: 1.3rem;
     margin: 0.5rem;
     padding: 1rem;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
   }
-}
 
+}
+.key-container button:nth-child(11) {
+  margin-left: 0.5;
+}
 }
 
