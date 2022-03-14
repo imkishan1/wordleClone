@@ -378,13 +378,13 @@
 footer {
   z-index: 100000;
   padding: 1.6rem 0;
+  background-color: rgba(255, 255, 255, 0.315);
 }
 
 footer .credits {
   margin: 0 auto;
   width: 100%;
   text-align: center;
-  padding-bottom: 10px;
 }
 
 footer .credits p {
