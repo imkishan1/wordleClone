@@ -7,7 +7,7 @@
 
 // app.use(cors())
 // app.get('/word',(req,res)=>{
-    
+
 // const options = {
 //     method: 'GET',
 //     url: 'https://random-words5.p.rapidapi.com/getMultipleRandom',
@@ -18,16 +18,15 @@
 //     }
 
 //   };
-  
+
 //   axios.request(options).then((response) => {
 //       console.log(response.data);
 //       res.json(response.data[0]);
 //   }).catch((error) => {
 //       console.error(error);
-      
+
 //   });
 // })
-
 
 // app.get('/check',(req,res) => {
 //     console.log(req)
@@ -42,19 +41,14 @@
 //       'x-rapidapi-key': process.env.RAPID_API_KEY
 //     }
 //   };
-  
+
 //   axios.request(options).then((response) => {
 //       console.log(response.data);
 //   }).catch((error) => {
 //       console.error(error);
 //   });
 
-
-
 // app.listen(PORT, ()=> console.log('server running on '+PORT));
-
-
-
 
 // function getMeaning()
 
@@ -5828,26 +5822,20 @@ API
 Training
 Blog
 About
-`
-
+`;
 
 const myArray = wordMilaHai.split("\n");
 var fiveLetterWord = [];
-myArray.forEach(res => {
-    if(res.length==5)
-    {
-        fiveLetterWord.push(res);
-    }
-})
-
+myArray.forEach((res) => {
+  if (res.length == 5) {
+    fiveLetterWord.push(res);
+  }
+});
 
 const randomWord = () => {
-   wordle =  (fiveLetterWord[fiveLetterWord.length * Math.random() | 0]).toUpperCase();
-}
+  wordle =
+    fiveLetterWord[(fiveLetterWord.length * Math.random()) | 0].toUpperCase();
+};
 randomWord();
-// console.log(wordle)
-getMeaning(wordle)
-
-
-
-
+console.log(wordle)
+getMeaning(wordle);

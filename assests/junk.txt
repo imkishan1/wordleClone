@@ -34,3 +34,62 @@
 //        "6": "M"
 //     }
 //  ]
+
+
+<div class="legend"> 
+    <div class="group">
+      <div class="circle green "></div>
+      <span>It means that you have correctly guessed that letter.</span>
+    </div>
+    <div class="group">
+      <div class="circle yellow"></div>
+      <span>Letter entred is correct but not at right position</span>
+    </div> 
+    <div class="group">
+      <div class="circle grey"></div>
+      <span>Letter is not there in the word.</span>
+    </div>
+  </div>
+
+  
+infoButton.addEventListener('click',()=> {
+    // paraSelector.innerText = ''
+    infoText.style.display = 'block'
+    infoText.style.height = '100%'
+    infoText.style.width = '100%'
+    infoText.innerHTML = ``
+  const closeButtonInfo = document.createElement('div')
+        closeButtonInfo.innerHTML = `<svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6 svg-icon"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="3"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        />
+      </svg>`
+      closeButtonInfo.setAttribute('class','close-button')
+      closeButtonInfo.setAttribute('id','close-button')
+      infoText.append(closeButtonInfo);
+  ;
+
+})
+
+// let highScore=0;
+
+// var today = new Date();
+
+// var date = (today.getFullYear())+'-'+(today.getMonth())+'-'+(today.getDate())+'/'+(today.getHours())+':'+(today.getMinutes())+':'+(today.getSeconds());
+// let localDataFetched = JSON.parse(localStorage.getItem("myObj"))
+// let fetchedScore = localDataFetched.score
+// let wordleSocre = {
+//     score: 0,
+//     lastLogin: date
+// }
+// wordleSocre.score = fetchedScore;
+// let stringifyScore = JSON.stringify(wordleSocre);

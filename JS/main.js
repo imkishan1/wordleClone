@@ -1,58 +1,43 @@
-// console.log("connected...")
 const tileDisplay = document.querySelector('.container-box-grid');
 const keyboard = document.querySelector('.key-container');
 const hint = document.querySelector('.hint');
 const messageDisplay = document.querySelector('.message-container');
 const card = document.querySelector('.card-container');
-const confeti =  document.querySelector('.confeti');
+const confeti = document.querySelector('.confeti');
 const clickToClose = document.querySelector('.close-buttton');
 const hintMainContainer = document.querySelector('.hint-text');
 const reloads = document.querySelector('#refresh');
-// let highScore=0;
-
-// var today = new Date();
-
-// var date = (today.getFullYear())+'-'+(today.getMonth())+'-'+(today.getDate())+'/'+(today.getHours())+':'+(today.getMinutes())+':'+(today.getSeconds());
-// let localDataFetched = JSON.parse(localStorage.getItem("myObj"))
-// let fetchedScore = localDataFetched.score
-// let wordleSocre = {
-//     score: 0,
-//     lastLogin: date
-// }
-// wordleSocre.score = fetchedScore;
-// let stringifyScore = JSON.stringify(wordleSocre);
-
-
-
-reloads.addEventListener('click',() => {
-
-    window.location.reload();
-})
-
-let isGameOver =  false;
+let isGameOver = false;
 let wordle;
 let meaning;
 let wordleMeaningText;
 
 
-clickToClose.addEventListener('click',() =>{
-      hintMainContainer.style.display = 'none'
+
+reloads.addEventListener('click', () => {
+
+    window.location.reload();
 })
 
-hint.addEventListener('click',() => {
+
+
+clickToClose.addEventListener('click', () => {
+    hintMainContainer.style.display = 'none'
+})
+
+hint.addEventListener('click', () => {
     hintMainContainer.style.display = 'block';
     hintMainContainer.style.height = '100%'
     hintMainContainer.style.width = '100%'
 })
 
-function getMeaning(wordMeaning)
-{
+function getMeaning(wordMeaning) {
     let url = `https://api.dictionaryapi.dev/api/v2/entries/en/${wordMeaning}`;
     fetch(url).then(res => res.json()).then(result => {
         const resSize = Object.keys(result).length;
-        const meanSize = Object.keys(result[resSize-1].meanings).length;
-        const defiSize = Object.keys(result[resSize-1].meanings[meanSize-1].definitions).length;
-        wordleMeaningText = result[resSize-1* Math.random() | 0].meanings[meanSize* Math.random() | 0].definitions[defiSize* Math.random() | 0].definition + `💡Hint: The word contains letter '${wordle[wordle.length * Math.random() | 0]}'`;
+        const meanSize = Object.keys(result[resSize - 1].meanings).length;
+        const defiSize = Object.keys(result[resSize - 1].meanings[meanSize - 1].definitions).length;
+        wordleMeaningText = result[resSize - 1 * Math.random() | 0].meanings[meanSize * Math.random() | 0].definitions[defiSize * Math.random() | 0].definition + `💡Hint: The word contains letter '${wordle[wordle.length * Math.random() | 0]}'`;
         const div = document.createElement('p')
         div.textContent = wordleMeaningText;
         hintMainContainer.append(div);
@@ -63,46 +48,46 @@ function getMeaning(wordMeaning)
 
 const keys = [
 
-    "Q","W","E","R","T","Y","U","I","O","P",
-    "A","S","D","F","G","H","J","K","L","<<",
-    "Z","X","C","V","B","N","M","Enter",
- ]
+    "Q", "W", "E", "R", "T", "Y", "U", "I", "O", "P",
+    "A", "S", "D", "F", "G", "H", "J", "K", "L", "<<",
+    "Z", "X", "C", "V", "B", "N", "M", "Enter",
+]
 
 
- // appending keyboard buttons dynamically
+// appending keyboard buttons dynamically
 
- keys.forEach(key=>{
-    const buttonElement =  document.createElement('button')
+keys.forEach(key => {
+    const buttonElement = document.createElement('button')
     buttonElement.textContent = key;
-    buttonElement.setAttribute('id',key);
+    buttonElement.setAttribute('id', key);
     keyboard.append(buttonElement);
-    buttonElement.addEventListener('click',() =>handleClick(key));
-  })
- 
+    buttonElement.addEventListener('click', () => handleClick(key));
+})
 
- let currRow = 0;
- let currTile = 0;
 
-const guessRows  = [
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
-    ['','','','',''],
+let currRow = 0;
+let currTile = 0;
+
+const guessRows = [
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
+    ['', '', '', '', ''],
 ]
 
 
 
 // this forEach loop is creating the tile.
 
-guessRows.forEach((guessRow,guessRowIndex)=>{
+guessRows.forEach((guessRow, guessRowIndex) => {
     const rowElement = document.createElement('div')
-    rowElement.setAttribute('id','guessRow-'+guessRowIndex);
+    rowElement.setAttribute('id', 'guessRow-' + guessRowIndex);
     rowElement.classList.add('rowElement');
-    guessRow.forEach((guess,guessIndex)=>{
+    guessRow.forEach((guess, guessIndex) => {
         const columnElement = document.createElement('div');
-        columnElement.setAttribute('id','guessRow-'+guessRowIndex+'-tile-'+guessIndex);
+        columnElement.setAttribute('id', 'guessRow-' + guessRowIndex + '-tile-' + guessIndex);
         columnElement.classList.add('columnElement');
         rowElement.append(columnElement);
     })
@@ -112,54 +97,32 @@ guessRows.forEach((guessRow,guessRowIndex)=>{
 
 //  this arrow function is handelling the keyboard clicks
 
- const handleClick = (key) => {
-     if(!isGameOver)
-     {
- // console.log(key);
- if(key== '<<')
- {
-     deleteLetter();
-     // messageElement.textContent = '';
-     // messageDisplay.textContent=''
-    //  console.log(guessRows)
-     return;
- }
- if(key==='Enter'){
-     checkRow()
-    //  console.log(guessRows)
-     // if(currRow<5)
-     // {
-     //     currRow++;
-     // }
-     return;
- }
- addLetter(key);
-     }
+const handleClick = (key) => {
+    if (!isGameOver) {
+        if (key == '<<') {
+            deleteLetter();
+            return;
+        }
+        if (key === 'Enter') {
+            checkRow()
+            return;
+        }
+        addLetter(key);
+    }
     //this function call will let us add the clicked word to the tile
- }
+}
 
 const addLetter = (letter) => {
-   const tile = document.getElementById('guessRow-'+currRow+'-tile-'+currTile)
-   if(currTile<5 && currRow<6){
-    tile.textContent = letter;
-    tile.setAttribute('data',letter);
-    guessRows[currRow][currTile] = letter;
-    currTile = currTile+1; 
-    // if(currTile==5)
-    // {
-    //     currRow++;
-    //     currTile=0;
-    // }
-    // console.log(guessRows)
+    const tile = document.getElementById('guessRow-' + currRow + '-tile-' + currTile)
+    if (currTile < 5 && currRow < 6) {
+        tile.textContent = letter;
+        tile.setAttribute('data', letter);
+        guessRows[currRow][currTile] = letter;
+        currTile = currTile + 1;
     }
 }
 
-
-// enterKey.innerHTML = `<span>Check </span><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 svg-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-// <path stroke-linecap="round" stroke-linejoin="round" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-// </svg>`
 const delKey = document.getElementById('<<')
-// delKey.innerHTML = `<i class='bx bx-chevrons-left'></i>`;
 delKey.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 svg-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
 <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2M3 12l6.414 6.414a2 2 0 001.414.586H19a2 2 0 002-2V7a2 2 0 00-2-2h-8.172a2 2 0 00-1.414.586L3 12z" />
 </svg>`;
@@ -168,41 +131,31 @@ delKey.style.fontSize = '20px';
 
 const deleteLetter = () => {
 
-    if(currTile > 0)
-    {
-        
+    if (currTile > 0) {
+
         currTile--;
-        const tile = document.getElementById('guessRow-'+ currRow +'-tile-' + currTile)
+        const tile = document.getElementById('guessRow-' + currRow + '-tile-' + currTile)
         tile.textContent = ''
         guessRows[currRow][currTile] = '';
-        tile.setAttribute('data','');
+        tile.setAttribute('data', '');
     }
-    // if(currRow>=0 && currTile >0)
-    // {
-    //     currRow = currRow-1;
-    // }
+
 
 }
 
-const checkRow = () =>{
-    const guess =  guessRows[currRow].join('')
+const checkRow = () => {
+    const guess = guessRows[currRow].join('')
     flipTiles()
-    // console.log(guess)
-    if(currTile === 5)
-    {
-        if(wordle == guess)
-        {
+    if (currTile === 5) {
+        if (wordle == guess) {
             card.classList.add('confeti');
             winAudio.play();
-            // fetchedScore = fetchedScore+100;
-            // localStorage.setItem("myObj",stringifyScore);
-           showmessage('Yay! You Guessed it right 🥳')
-           isGameOver = true;
-           return;
+            showmessage('Yay! You Guessed it right 🥳')
+            isGameOver = true;
+            return;
         }
-        else{
-            if(currRow >= 5)
-            {
+        else {
+            if (currRow >= 5) {
                 isGameOver = false;
                 looseAudio.play();
                 showmessage(`Game Over 👾 The Word Was ${wordle}`)
@@ -211,9 +164,8 @@ const checkRow = () =>{
 
         }
     }
-    if(currRow < 5)
-    {
-        currRow = currRow+1;
+    if (currRow < 5) {
+        currRow = currRow + 1;
         currTile = 0;
     }
 }
@@ -224,62 +176,51 @@ const showmessage = (message) => {
     messageDisplay.style.height = '30px';
     messageDisplay.append(messageElement);
     // messageDisplay.classList.add('flip')
-    setTimeout(()=> { card.classList.remove('confeti')
-                      card.style.opacity = '0px';
-    },3900)
-    setTimeout(()=>  messageDisplay.style.height = '0px',4000)
-    setTimeout(()=> messageDisplay.removeChild(messageElement),4070)
+    setTimeout(() => {
+        card.classList.remove('confeti')
+        card.style.opacity = '0px';
+    }, 3900)
+    setTimeout(() => messageDisplay.style.height = '0px', 4000)
+    setTimeout(() => messageDisplay.removeChild(messageElement), 4070)
 }
 
 const addColorToKey = (keyletter, color) => {
-        const key = document.getElementById(keyletter)
-        key.classList.add(color)
+    const key = document.getElementById(keyletter)
+    key.classList.add(color)
 }
 
-const flipTiles = () =>{
-    const rowTiles =  document.querySelector('#guessRow-'+currRow).childNodes;
+const flipTiles = () => {
+    const rowTiles = document.querySelector('#guessRow-' + currRow).childNodes;
     // const dataLetter = tile.getAttribute('data')
-let checkWordle = wordle;
-const guessWhat = []
-rowTiles.forEach(tile=>{
-    guessWhat.push({letter: tile.getAttribute('data'),color: 'grey'})
-})
+    let checkWordle = wordle;
+    const guessWhat = []
+    rowTiles.forEach(tile => {
+        guessWhat.push({ letter: tile.getAttribute('data'), color: 'grey' })
+    })
 
-guessWhat.forEach((guess,index) => {
-    if(guess.letter == wordle[index]){
-        guess.color = 'green'
-        checkWordle = checkWordle.replace(guess.letter, '')
-    }
-})
+    guessWhat.forEach((guess, index) => {
+        if (guess.letter == wordle[index]) {
+            guess.color = 'green'
+            checkWordle = checkWordle.replace(guess.letter, '')
+        }
+    })
 
-guessWhat.forEach(guess=>{
-    if(checkWordle.includes(guess.letter)){
-        guess.color = 'yellow'
-        checkWordle = checkWordle.replace(guess.letter,'');
-    }
-})
+    guessWhat.forEach(guess => {
+        if (checkWordle.includes(guess.letter)) {
+            guess.color = 'yellow'
+            checkWordle = checkWordle.replace(guess.letter, '');
+        }
+    })
 
 
-    rowTiles.forEach((tile ,index)=>{
+    rowTiles.forEach((tile, index) => {
         setTimeout(() => {
             tile.classList.add('flip')
             tile.classList.add(guessWhat[index].color)
-            addColorToKey(guessWhat[index].letter,guessWhat[index].color);
-        }, 100*index)
+            addColorToKey(guessWhat[index].letter, guessWhat[index].color);
+        }, 100 * index)
     })
-  }
-
-//   setTimeout( ()=> card.classList.remove('confeti'),4000);
-
+}
 
 winAudio = new Audio('/assests/mixkit-video-game-win-2016.wav');
 looseAudio = new Audio('/assests/mixkit-falling-game-over-1942.wav');
-
-
-
-
-
-// console.log(localStorage)
-
-
-// console.log(fetchedScore)
