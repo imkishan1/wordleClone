@@ -425,6 +425,7 @@ footer {
   z-index: 100000;
   padding: 1.6rem 0;
   background-color: rgba(255, 255, 255, 0.315);
+  font-family: 'Poppins',sans-serif;
 }
 
 footer .credits {
@@ -434,7 +435,7 @@ footer .credits {
 }
 
 footer .credits p {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 500;
   color: #1B1918;
 }
