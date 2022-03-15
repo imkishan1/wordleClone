@@ -283,7 +283,7 @@
   color: #1B1918 !important;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  padding: 1.3rem 2.8rem 1.3rem 1.3rem;
+  padding: 1.3rem 3rem 1.3rem 1.3rem;
   z-index: 1000;
   top: 50%;
   left: 50%;
@@ -310,10 +310,6 @@
   background: rgba(128, 128, 128, 0.281);
 }
 
-.hint-text .hint-text p:nth-child(2) {
-  margin-bottom: 0px !important;
-}
-
 .hint-text .svg-icon {
   position: absolute;
   right: 0;
@@ -332,6 +328,10 @@
   text-align: center;
   font-size: 3rem;
   color: #fff;
+}
+
+.hint-text p:last-child {
+  margin-bottom: 0rem;
 }
 
 .info-legend {

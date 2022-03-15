@@ -117,10 +117,6 @@
   margin: 0 auto;
   margin-bottom: 2rem;
   transition: 0.25s all ease-in;
-  // background-color: $bg-light-primary;
-  // border-radius: .5rem;
-  // border: 2px solid $bg-text-orange;
-  // display: none;
 
   p {
     font-family: 'Poppins', sans-serif;
@@ -133,8 +129,6 @@
     font-size: 1.6rem;
     font-weight: 500;
     animation: fade-in 0.5s ease-in-out;
-    // transition: 1s all ease-in;
-    // color: aliceblue;
   }
 }
 
@@ -223,7 +217,7 @@
   background-color: rgba(58, 58, 58, 0.719);
   color: $bg-light-blank !important;
   backdrop-filter: blur(1px);
-  padding: 1.3rem 2.8rem 1.3rem 1.3rem;
+  padding: 1.3rem 3rem 1.3rem 1.3rem;
   // padding-right: 2rem;
   z-index: 1000;
   top: 50%;
@@ -244,13 +238,9 @@
     font-weight: normal !important;
     margin-bottom: 1rem;
     background: rgba(128, 128, 128, 0.281);
+
   }
-  .hint-text 
-  {
-    p:nth-child(2){
-      margin-bottom: 0px !important;
-    }
-  }
+
   .svg-icon {
     position: absolute;
     right: 0;
@@ -269,6 +259,11 @@
     font-size: 3rem;
     color: #fff;
   }
+}
+
+.hint-text p:last-child
+{
+  margin-bottom: 0rem;
 }
 
 .info-legend {
