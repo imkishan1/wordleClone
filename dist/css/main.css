@@ -498,6 +498,7 @@ footer .credits p {
   letter-spacing: 1px;
   word-spacing: 1px;
   line-height: normal;
+  font-weight: normal !important;
 }
 
 .legend .group .circle {
@@ -514,6 +515,7 @@ footer .credits p {
 .legend p {
   padding: 1rem;
   border-radius: .5rem;
+  font-weight: normal !important;
   background: rgba(128, 128, 128, 0.281);
 }
 

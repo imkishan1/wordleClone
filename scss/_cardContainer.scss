@@ -408,6 +408,7 @@ footer {
     letter-spacing: 1px;
     word-spacing: 1px;
     line-height: normal;
+    font-weight: normal !important;
     .circle {
       flex: 0 0 auto;
       border: 2px solid rgba(255, 255, 255, 0.288);
@@ -420,6 +421,7 @@ footer {
   p{
     padding: 1rem;
     border-radius: .5rem;
+    font-weight: normal !important;
     background: rgba(128, 128, 128, 0.281);
   }
 }
