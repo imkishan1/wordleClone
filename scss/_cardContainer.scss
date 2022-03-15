@@ -121,6 +121,7 @@
   // display: none;
 
   p {
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     background-color: rgba(204, 204, 204, 0.2);
     color: rgb(236, 236, 236);
@@ -216,6 +217,7 @@
   height: 0%;
   height: fit-content !important;
   position: absolute;
+  font-family: 'Poppins', sans-serif;
   background-color: rgba(58, 58, 58, 0.719);
   color: $bg-light-blank !important;
   backdrop-filter: blur(1px);
@@ -258,9 +260,10 @@
 .info-legend {
   display: none;
   max-width: 600px;
-  max-height: 300px;
+  max-height: 400px;
   width: 100%;
   height: 0%;
+  font-family: 'Poppins', sans-serif;
   height: fit-content !important;
   position: absolute;
   background-color: rgba(58, 58, 58, 0.719);
@@ -285,7 +288,7 @@
   .svg-icon {
     position: absolute;
     right: 0;
-    top: 10%;
+    top: 5%;
     transform: translateX(-10px);
     color: #fff;
     // color: grey;
@@ -299,6 +302,19 @@
     text-align: center;
     font-size: 3rem;
     color: #fff;
+  }
+  .legend {
+    h1{
+      // width: 100%;
+      // border: 1px solid red;
+      text-align: center;
+      text-transform: capitalize;
+      color: #fff;
+      font-size: 2.4rem;
+      width: fit-content;
+      margin: 0 auto;
+     margin-bottom: 1rem;
+    }
   }
 }
 
@@ -426,6 +442,7 @@ footer {
     padding: 1rem;
     border-radius: .5rem;
     font-weight: normal !important;
+    margin-bottom: 1rem;
     background: rgba(128, 128, 128, 0.281);
   }
 }
