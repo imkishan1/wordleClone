@@ -443,6 +443,9 @@ footer {
     word-spacing: 1px;
     line-height: normal;
     font-weight: normal !important;
+    span{
+      text-transform: capitalize;
+    }
     .circle {
       flex: 0 0 auto;
       border: 2px solid rgba(255, 255, 255, 0.288);

@@ -525,6 +525,10 @@ footer .credits p {
   font-weight: normal !important;
 }
 
+.legend .group span {
+  text-transform: capitalize;
+}
+
 .legend .group .circle {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 auto;
