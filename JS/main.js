@@ -28,7 +28,7 @@ divEle.innerHTML = ''
 divEle.innerHTML = `
 <div class="legend"> 
     <h1>💡How to Play?</h1>
-    <p> You have 6 chances to guess a 5 letter word. You need to guess the word with the help of definition given in the hint section.</p>
+    <p>The rules are very simple: You have 6 chances to guess a 5 letter word. You need to guess the word with the help of definition given in the hint section.</p>
 
     <div class="group">
       <div class="circle green "></div>
@@ -54,6 +54,7 @@ legendClose.addEventListener('click',()=> {
 reloads.addEventListener('click', () => {
 
     window.location.reload();
+
 })
 
 

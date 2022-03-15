@@ -5837,5 +5837,5 @@ const randomWord = () => {
     fiveLetterWord[(fiveLetterWord.length * Math.random()) | 0].toUpperCase();
 };
 randomWord();
-// console.log(wordle)
+console.log(wordle)
 getMeaning(wordle);
