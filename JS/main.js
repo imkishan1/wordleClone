@@ -17,8 +17,8 @@ let wordleMeaningText;
 
 infoIcon.addEventListener('click', ()=> {
         legendInfo.style.display = 'block';
-        legendInfo.style.width = '100%'
-        legendInfo.style.height = '100%'
+        // legendInfo.style.width = '100%'
+        // legendInfo.style.height = '100%'
         hintMainContainer.style.display = 'none';
 })
 
