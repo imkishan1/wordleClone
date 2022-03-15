@@ -14,6 +14,7 @@
   font-size: 6rem;
   font-family: "Pacifico", cursive;
   color: #fff;
+  font-weight: 400;
 }
 
 .card-container .container-box-grid {
@@ -246,8 +247,8 @@
   right: 0;
   top: 0;
   color: rgba(255, 255, 255, 0.575) !important;
-  -webkit-transform: translate(-7px, 5px);
-          transform: translate(-7px, 5px);
+  -webkit-transform: translate(0px, 0px);
+          transform: translate(0px, 0px);
 }
 
 .flex-box .hint {
@@ -350,8 +351,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 0.5rem;
-  -webkit-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
   -webkit-animation: motionSize 0.3s alternate;
           animation: motionSize 0.3s alternate;
 }

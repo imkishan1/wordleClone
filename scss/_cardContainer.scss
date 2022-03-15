@@ -9,7 +9,9 @@
     font-size: 6rem;
     font-family: "Pacifico", cursive;
     color: #fff;
+    font-weight: 400;
   }
+  
   .container-box-grid {
     position: relative;
     max-width: 350px;
@@ -189,7 +191,7 @@
   right: 0;
   top: 0;
   color: rgba(255, 255, 255, 0.575) !important;
-  transform: translate(-7px, 5px);
+  transform: translate(0px, 0px);
 
   .hint {
     z-index: 100000;
@@ -277,7 +279,7 @@
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   border-radius: 0.5rem;
-  transition: 0.3s all ease-in-out;
+  // transition: 0.3s all ease-in-out;
   animation: motionSize 0.3s alternate;
   p {
     font-size: 1.6rem !important;
