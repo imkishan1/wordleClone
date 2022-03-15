@@ -475,6 +475,9 @@ footer .credits p {
   .hint-text {
     max-width: 380px;
   }
+  .info-legend {
+    max-width: 380px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -493,6 +496,9 @@ footer .credits p {
     margin-left: 0.5rem;
   }
   .hint-text {
+    max-width: 340px;
+  }
+  .info-legend {
     max-width: 340px;
   }
 }
