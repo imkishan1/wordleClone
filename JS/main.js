@@ -7,11 +7,45 @@ const confeti = document.querySelector('.confeti');
 const clickToClose = document.querySelector('.close-buttton');
 const hintMainContainer = document.querySelector('.hint-text');
 const reloads = document.querySelector('#refresh');
+const legendClose = document.querySelector('#buttonClose');
+const legendInfo = document.querySelector('.info-legend');
+const infoIcon = document.querySelector('#info');
 let isGameOver = false;
 let wordle;
 let meaning;
 let wordleMeaningText;
 
+infoIcon.addEventListener('click', ()=> {
+        legendInfo.style.display = 'block';
+        legendInfo.style.width = '100%'
+        legendInfo.style.height = '100%'
+        hintMainContainer.style.display = 'none';
+})
+
+
+const divEle = document.createElement('div');
+divEle.innerHTML = ''
+divEle.innerHTML = `
+<div class="legend"> 
+    <div class="group">
+      <div class="circle green "></div>
+      <span>You have correctly guessed that letter.</span>
+    </div>
+    <div class="group">
+      <div class="circle yellow"></div>
+      <span>Letter entered is correct but not at the right position.</span>
+    </div> 
+    <div class="group">
+      <div class="circle grey"></div>
+      <span>Wrong letter entered.</span>
+    </div>
+    <p>💡Meaning of the word is given in the hint section, you need to guess the word.</p>
+  </div>`
+  legendInfo.append(divEle);
+
+legendClose.addEventListener('click',()=> {
+    legendInfo.style.display = 'none';
+})
 
 
 reloads.addEventListener('click', () => {
@@ -26,6 +60,7 @@ clickToClose.addEventListener('click', () => {
 })
 
 hint.addEventListener('click', () => {
+    legendInfo.style.display = 'none';
     hintMainContainer.style.display = 'block';
     hintMainContainer.style.height = '100%'
     hintMainContainer.style.width = '100%'

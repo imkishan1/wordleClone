@@ -321,6 +321,60 @@
   color: #fff;
 }
 
+.info-legend {
+  display: none;
+  max-width: 600px;
+  max-height: 300px;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  position: absolute;
+  background-color: rgba(58, 58, 58, 0.507);
+  color: #1B1918 !important;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 1.3rem 2.8rem 1.3rem 1.3rem;
+  z-index: 1000;
+  top: 50%;
+  right: 50%;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.5rem;
+  -webkit-transition: 0.3s all ease-in-out;
+  transition: 0.3s all ease-in-out;
+  -webkit-animation: motionSize 0.5s alternate;
+          animation: motionSize 0.5s alternate;
+}
+
+.info-legend p {
+  font-size: 2rem !important;
+  word-spacing: 1px;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.info-legend .svg-icon {
+  position: absolute;
+  right: 0;
+  top: 10%;
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+  color: #fff;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.info-legend p {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
 @-webkit-keyframes motionSize {
   0% {
     height: 0%;
@@ -418,6 +472,9 @@ footer .credits p {
     width: 35px;
     height: 35px;
   }
+  .hint-text {
+    max-width: 380px;
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -469,14 +526,27 @@ footer .credits p {
           align-items: center;
   margin-bottom: .8rem;
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  word-spacing: 1px;
+  line-height: normal;
 }
 
 .legend .group .circle {
-  width: 30px;
-  height: 30px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  border: 2px solid rgba(255, 255, 255, 0.288);
+  width: 20px !important;
+  height: 20px !important;
   border-radius: 50%;
   margin-right: .8rem;
+}
+
+.legend p {
+  padding: 1rem;
+  border-radius: .5rem;
+  background: rgba(128, 128, 128, 0.281);
 }
 
 * {
