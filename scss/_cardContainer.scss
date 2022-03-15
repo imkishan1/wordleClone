@@ -214,7 +214,7 @@
   max-height: 300px;
   height: fit-content !important;
   position: absolute;
-  background-color: rgba(58, 58, 58, 0.507);
+  background-color: rgba(58, 58, 58, 0.719);
   color: $bg-light-blank !important;
   backdrop-filter: blur(1px);
   padding: 1.3rem 2.8rem 1.3rem 1.3rem;
@@ -259,7 +259,7 @@
   max-height: 300px;
   height: fit-content !important;
   position: absolute;
-  background-color: rgba(58, 58, 58, 0.507);
+  background-color: rgba(58, 58, 58, 0.719);
   color: $bg-light-blank !important;
   backdrop-filter: blur(1px);
   padding: 1.3rem 2.8rem 1.3rem 1.3rem;
@@ -273,7 +273,7 @@
   transition: 0.3s all ease-in-out;
   animation: motionSize 0.3s alternate;
   p {
-    font-size: 2rem !important;
+    font-size: 1.6rem !important;
     word-spacing: 1px;
     line-height: normal;
     letter-spacing: 1px;
