@@ -50,7 +50,7 @@
 }
 
 .key-container {
-  max-width: 489px;
+  max-width: 480px;
   width: 100%;
   min-height: 150px;
   height: 100%;
@@ -65,7 +65,7 @@
     outline: 0;
     border: 0;
     font-size: 2rem;
-    margin: 0.4rem;
+    margin: 0.2rem;
     background-color: rgba(255, 255, 255, 0.288);
     padding: 1rem;
     width: 40px;
@@ -75,9 +75,11 @@
     cursor: pointer;
     z-index: 9;
     user-select: none;
+    // color:#5a6376;
     color: $color-light-text;
     transition: 0.2s all ease;
     font-weight: bold;
+
     &:hover {
       //   background-color: rgba(180, 60, 235, 0.288);
       // box-shadow: 0 0 20px rgba(19, 18, 18, 0.1);
@@ -373,7 +375,7 @@ footer {
 @media screen and(max-width:500px) {
   .key-container {
     text-align: center;
-    max-width: 489px;
+    max-width: 480px;
     width: 100%;
     min-height: 150px;
     height: 100%;
@@ -383,7 +385,7 @@ footer {
 
     button {
       font-size: 1.6rem;
-      margin: 0.5rem;
+      margin: 0.2rem !important;
       padding: 1rem;
       width: 35px;
       height: 35px;
