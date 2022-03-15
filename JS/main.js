@@ -28,6 +28,7 @@ divEle.innerHTML = ''
 divEle.innerHTML = `
 <div class="legend"> 
     <h1>💡How to Play?</h1>
+    <p> You have 6 chances to guess a 5 letter word. You need to guess the word with the help of definition given in the hint section.</p>
     <div class="group">
       <div class="circle green "></div>
       <span>You have correctly guessed that letter.</span>
@@ -40,7 +41,7 @@ divEle.innerHTML = `
       <div class="circle grey"></div>
       <span>Wrong letter entered.</span>
     </div>
-    <p> You have 6 chances to guess a 5 letter word. You need to guess the word with the help of definition given in the hint section.</p>
+   
   </div>`
   legendInfo.append(divEle);
 
