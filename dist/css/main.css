@@ -344,8 +344,8 @@
   border-radius: 0.5rem;
   -webkit-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
-  -webkit-animation: motionSize 0.5s alternate;
-          animation: motionSize 0.5s alternate;
+  -webkit-animation: motionSize 0.3s alternate;
+          animation: motionSize 0.3s alternate;
 }
 
 .info-legend p {
