@@ -544,6 +544,28 @@ footer .credits p {
   background: rgba(128, 128, 128, 0.281);
 }
 
+.legend .rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  padding: 1rem;
+  border-radius: .5rem;
+  font-weight: normal !important;
+  margin-bottom: 1rem;
+}
+
 * {
   margin: 0;
   padding: 0;
