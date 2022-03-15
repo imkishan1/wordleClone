@@ -192,7 +192,7 @@ const checkRow = () => {
         if (wordle == guess) {
             card.classList.add('confeti');
             winAudio.play();
-            showmessage('Yay! You Guessed it right 🥳')
+            showmessage('Woohoo! You Guessed it right 🥳')
             isGameOver = true;
             return;
         }
