@@ -11,7 +11,7 @@
     color: #fff;
     font-weight: 400;
   }
-  
+
   .container-box-grid {
     position: relative;
     max-width: 350px;
@@ -238,6 +238,19 @@
     word-spacing: 1px;
     line-height: normal;
     letter-spacing: 1px;
+
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: normal !important;
+    margin-bottom: 1rem;
+    background: rgba(128, 128, 128, 0.281);
+  }
+  .hint-text 
+  {
+    p:nth-child(2){
+
+      margin-bottom: 0px !important;
+    }
   }
   .svg-icon {
     position: absolute;

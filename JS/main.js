@@ -74,10 +74,14 @@ function getMeaning(wordMeaning) {
         const resSize = Object.keys(result).length;
         const meanSize = Object.keys(result[resSize - 1].meanings).length;
         const defiSize = Object.keys(result[resSize - 1].meanings[meanSize - 1].definitions).length;
-        wordleMeaningText = result[resSize - 1 * Math.random() | 0].meanings[meanSize * Math.random() | 0].definitions[defiSize * Math.random() | 0].definition + `💡Hint: The word contains letter '${wordle[wordle.length * Math.random() | 0]}'`;
+        wordleMeaningText = result[resSize - 1 * Math.random() | 0].meanings[meanSize * Math.random() | 0].definitions[defiSize * Math.random() | 0].definition;
         const div = document.createElement('p')
+        const div2 = document.createElement('p');
+        const hintTextF = `💡Hint: The word contains letter '${wordle[wordle.length * Math.random() | 0]}'`
+        div2.textContent = hintTextF;
         div.textContent = wordleMeaningText;
         hintMainContainer.append(div);
+        hintMainContainer.append(div2);
     });
 
 }
