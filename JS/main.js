@@ -39,7 +39,7 @@ divEle.innerHTML = `
       <div class="circle grey"></div>
       <span>Wrong letter entered.</span>
     </div>
-    <p>💡How to Play: You have 6 chances to Guess a word. You need to guess the word with the help of definition given in the hint section.</p>
+    <p>💡How to Play: You have 6 chances to Guess a 5 letter word. You need to guess the word with the help of definition given in the hint section.</p>
   </div>`
   legendInfo.append(divEle);
 
