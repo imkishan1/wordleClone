@@ -222,7 +222,7 @@ const showmessage = (message) => {
     setTimeout(() => {
         card.classList.remove('confeti')
         card.style.opacity = '0px';
-    }, 3900)
+    }, 29900)
     setTimeout(() => messageDisplay.style.height = '0px', 30000)
     setTimeout(() => messageDisplay.removeChild(messageElement), 30070)
 }
