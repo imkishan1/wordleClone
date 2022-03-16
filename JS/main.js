@@ -199,7 +199,7 @@ const checkRow = () => {
         }
         else {
             if (currRow >= 5) {
-                isGameOver = false;
+                isGameOver = true;
                 looseAudio.play();
                 showmessage(`Game Over 👾 The Word Was ${wordle}`)
                 return;
