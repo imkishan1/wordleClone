@@ -248,6 +248,7 @@
   color: rgba(255, 255, 255, 0.575) !important;
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
+  gap: 7px;
 }
 
 .flex-box .hint {
