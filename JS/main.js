@@ -223,8 +223,8 @@ const showmessage = (message) => {
         card.classList.remove('confeti')
         card.style.opacity = '0px';
     }, 3900)
-    setTimeout(() => messageDisplay.style.height = '0px', 4000)
-    setTimeout(() => messageDisplay.removeChild(messageElement), 4070)
+    setTimeout(() => messageDisplay.style.height = '0px', 30000)
+    setTimeout(() => messageDisplay.removeChild(messageElement), 30070)
 }
 
 const addColorToKey = (keyletter, color) => {
