@@ -5769,9 +5769,9 @@ myArray.forEach((res) => {
 });
 
 const randomWord = () => {
-  wordle =
-    fiveLetterWord[(fiveLetterWord.length * Math.random()) | 0].toUpperCase();
+  wordle = fiveLetterWord[(fiveLetterWord.length * Math.random()) | 0].toUpperCase();
+  getMeaning(wordle);
 };
 randomWord();
 console.log(wordle)
-getMeaning(wordle);
+
