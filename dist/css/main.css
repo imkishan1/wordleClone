@@ -285,7 +285,7 @@
   color: #1B1918 !important;
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
-  padding: 1.3rem 3rem 1.3rem 1.3rem;
+  padding: 1.3rem;
   z-index: 1000;
   top: 50%;
   left: 50%;
@@ -312,12 +312,16 @@
   background: rgba(128, 128, 128, 0.281);
 }
 
-.hint-text .svg-icon {
+.hint-text .close-buttton {
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+.hint-text .close-buttton .svg-icon {
   position: absolute;
   right: 0;
-  top: 10%;
-  -webkit-transform: translateX(-10px);
-          transform: translateX(-10px);
+  top: 0;
   color: #fff;
   font-size: 2rem !important;
   font-weight: bold !important;
@@ -669,6 +673,144 @@ footer .links i:hover {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: 1.2rem !important;
   }
+}
+
+.scoreCard {
+  display: none;
+  max-width: 300px;
+  max-height: 200px;
+  width: 100%;
+  height: auto;
+  font-family: 'Poppins', sans-serif;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+  position: absolute;
+  background-color: rgba(58, 58, 58, 0.719);
+  color: #1B1918 !important;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+  padding: 1.8rem;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 0.5rem;
+  z-index: 100000;
+  -webkit-animation: motionSize 0.3s alternate;
+          animation: motionSize 0.3s alternate;
+}
+
+.scoreCard .closeButton {
+  width: 100%;
+  height: 30px;
+  position: relative;
+}
+
+.scoreCard .closeButton .svg-icon {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  font-size: 2rem !important;
+  font-weight: bold !important;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.scoreCard .scoreDetails {
+  width: 100%;
+  height: 100%;
+  min-height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.scoreCard .scoreDetails .highestScore {
+  width: 100%;
+  min-height: 50px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.scoreCard .scoreDetails .highestScore span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  font-size: 2.2rem;
+  color: #fff;
+}
+
+.scoreCard .scoreDetails .highestScore span .medal-gold {
+  font-size: 2.3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e7cb2c), to(#91580e));
+  background: linear-gradient(to bottom, #e7cb2c 0%, #91580e 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scoreCard .scoreDetails .highestScore span .medal-silver {
+  font-size: 2.3rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#797776));
+  background: linear-gradient(to bottom, #e0e0e0 0%, #797776 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.scoreCard .scoreDetails .highestScore span i:before {
+  display: inline;
+}
+
+.scoreCard p {
+  font-size: 1.6rem !important;
+  word-spacing: 1px;
+  line-height: normal;
+  letter-spacing: 1px;
+}
+
+.scoreCard p {
+  text-align: center;
+  font-size: 3rem;
+  color: #fff;
+}
+
+.scoreCard .legend h1 {
+  text-align: center;
+  text-transform: capitalize;
+  color: #fff;
+  font-size: 2.4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 1rem;
 }
 
 * {

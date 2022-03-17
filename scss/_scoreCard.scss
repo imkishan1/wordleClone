@@ -1,0 +1,121 @@
+
+.scoreCard {
+    display: none;
+    max-width: 300px;
+    max-height: 200px;
+    width: 100%;
+    height: auto;
+    font-family: 'Poppins', sans-serif;
+    height: fit-content !important;
+    position: absolute;
+    background-color: rgba(58, 58, 58, 0.719);
+    color: $bg-light-blank !important;
+    backdrop-filter: blur(1px);
+    padding:1.8rem;
+    // padding-right: 2rem;
+    z-index: 1000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    border-radius: 0.5rem;
+    z-index: 100000;
+    // display: flex;
+    // transition: 0.3s all ease-in-out;
+    animation: motionSize 0.3s alternate;
+    .closeButton{
+        width: 100%;
+        height: 30px;
+        // border: 1px solid red;
+        position: relative;
+        .svg-icon {
+            position: absolute;
+            right: 0;
+            // top: 5%;
+            // transform: translateX(-10px);
+            color: #fff;
+            // color: grey;
+            font-size: 2rem !important;
+            font-weight: bold !important;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+          }
+    }
+    .scoreDetails{
+        width: 100%;
+        // border: 1px solid green;
+        height: 100%;
+        min-height: 100px;
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-direction: column;
+        .highestScore{
+            width: 100%;
+            min-height: 50px;
+            height: 100%;
+            // border: 1px solid black;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            span{
+                display: flex;
+                // justify-content: ;
+                align-items: center;
+                gap: 8px;
+                font-size: 2.2rem;
+                color: #fff;
+                .medal-gold{
+                    font-size: 2.3rem;
+                    background:-moz-linear-gradient(top, #e7db2c 0%, #91580e 100%); 
+                    background: -webkit-linear-gradient(top, #e7cb2c 0%,#91580e 100%); 
+                    background: linear-gradient(to bottom, #e7cb2c 0%,#91580e 100%);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                   -webkit-text-fill-color:transparent;
+                }
+                .medal-silver{
+                    font-size: 2.3rem;
+                    background:-moz-linear-gradient(top, #e0e0e0 0%, #797776 100%); 
+                    background: -webkit-linear-gradient(top, #e0e0e0 0%,#797776 100%); 
+                    background: linear-gradient(to bottom, #e0e0e0 0%,#797776 100%);
+                    -webkit-background-clip: text;
+                    -moz-background-clip: text;
+                    background-clip: text;
+                   -webkit-text-fill-color:transparent;
+                }
+                i:before {
+                    display: inline;
+                  }
+            }
+        }
+    }
+
+    p {
+      font-size: 1.6rem !important;
+      word-spacing: 1px;
+      line-height: normal;
+      letter-spacing: 1px;
+    }
+
+    p {
+      text-align: center;
+      font-size: 3rem;
+      color: #fff;
+    }
+    .legend {
+      h1{
+        // width: 100%;
+        // border: 1px solid red;
+        text-align: center;
+        text-transform: capitalize;
+        color: #fff;
+        font-size: 2.4rem;
+        width: fit-content;
+        margin: 0 auto;
+       margin-bottom: 1rem;
+      }
+    }
+  }

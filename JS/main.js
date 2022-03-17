@@ -10,17 +10,36 @@ const reloads = document.querySelector('#refresh');
 const legendClose = document.querySelector('#buttonClose');
 const legendInfo = document.querySelector('.info-legend');
 const infoIcon = document.querySelector('#info');
+const closeScore = document.querySelector('#scoreClose');
+const scoreCard = document.querySelector('.scoreCard');
+const leaderBoard = document.querySelector('#scoreOpen');
+const scoreDetails =  document.querySelector('.scoreDetails');
+const scoreThis = document.getElementById('score-this');
+const scoreHi = document.getElementById('score-hi')
 let isGameOver = false;
 let wordle;
 let meaning;
 let wordleMeaningText;
+let high_score = 0;
 
 infoIcon.addEventListener('click', ()=> {
         legendInfo.style.display = 'block';
-        // legendInfo.style.width = '100%'
-        // legendInfo.style.height = '100%'
         hintMainContainer.style.display = 'none';
 })
+
+closeScore.addEventListener('click', ()=> {
+    console.log("clicked Close")
+    scoreCard.style.display = 'none';
+})
+
+leaderBoard.addEventListener('click',()=>{
+    scoreCard.style.display = 'block';
+    scoreHi.textContent = localStorage.getItem("HighScore")
+    scoreThis.textContent = sessionStorage.getItem("Score")
+    // scoreDetails.style.display = 'flex';
+})
+
+
 
 
 const divEle = document.createElement('div');
@@ -45,6 +64,9 @@ divEle.innerHTML = `
 
   </div>`
   legendInfo.append(divEle);
+
+
+
 
 legendClose.addEventListener('click',()=> {
     legendInfo.style.display = 'none';
@@ -193,6 +215,20 @@ const checkRow = () => {
         if (wordle == guess) {
             card.classList.add('confeti');
             winAudio.play();
+            var highSore1 = localStorage.getItem("HighScore");
+            
+            if(isNaN(sessionStorage.getItem("Score")))
+            {
+            sessionStorage.setItem("Score",0) 
+            }
+            high_score = parseInt(sessionStorage.getItem("Score")) + 100;
+            sessionScore(high_score);
+            if(high_score>highSore1)
+            {
+                highestScore(high_score);
+            }
+            scoreHi.textContent = localStorage.getItem("HighScore")
+            scoreThis.textContent = sessionStorage.getItem("Score")
             showmessage('Woohoo! You Guessed it right 🥳')
             isGameOver = true;
             return;
@@ -201,6 +237,8 @@ const checkRow = () => {
             if (currRow >= 5) {
                 isGameOver = true;
                 looseAudio.play();
+                scoreHi.textContent = localStorage.getItem("HighScore")
+                scoreThis.textContent = sessionStorage.getItem("Score")
                 showmessage(`Game Over 👾 The Word Was ${wordle}`)
                 return;
             }
@@ -267,3 +305,16 @@ const flipTiles = () => {
 
 winAudio = new Audio('/assests/mixkit-video-game-win-2016.wav');
 looseAudio = new Audio('/assests/mixkit-falling-game-over-1942.wav');
+
+function highestScore(score)
+    {
+        localStorage.setItem("HighScore",score);
+    }
+
+function sessionScore(scr)
+{
+    sessionStorage.setItem("Score",scr);
+}
+
+// sessionStorage.setItem("Score",0)
+// localStorage.removeItem("HighScore")
