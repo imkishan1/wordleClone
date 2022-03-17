@@ -25,6 +25,7 @@ let high_score = 0;
 infoIcon.addEventListener('click', ()=> {
         legendInfo.style.display = 'block';
         hintMainContainer.style.display = 'none';
+        scoreCard.style.display = 'none';
 })
 
 closeScore.addEventListener('click', ()=> {
@@ -33,6 +34,7 @@ closeScore.addEventListener('click', ()=> {
 
 leaderBoard.addEventListener('click',()=>{
     scoreCard.style.display = 'block';
+    hintMainContainer.style.display = 'none';
     scoreHi.textContent = localStorage.getItem("HighScore")
     scoreThis.textContent = sessionStorage.getItem("Score")
     // scoreDetails.style.display = 'flex';
@@ -86,6 +88,7 @@ clickToClose.addEventListener('click', () => {
 
 hint.addEventListener('click', () => {
     legendInfo.style.display = 'none';
+    scoreCard.style.display = 'none';
     hintMainContainer.style.display = 'block';
     hintMainContainer.style.height = '100%'
     hintMainContainer.style.width = '100%'
