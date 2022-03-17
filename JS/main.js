@@ -238,6 +238,7 @@ const checkRow = () => {
             }
             scoreThis.textContent = high_score;
             scoreThis.textContent = sessionStorage.getItem("Score")
+            scoreCard.style.display = 'block';
             showmessage('Woohoo! You Guessed it right 🥳')
             isGameOver = true;
             return;
