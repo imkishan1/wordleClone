@@ -75,6 +75,7 @@
     cursor: pointer;
     z-index: 9;
     user-select: none;
+    font-family: 'Archivo', sans-serif;
     // color:#5a6376;
     color: $color-light-text;
     transition: 0.2s all ease;
@@ -91,7 +92,7 @@
 }
 .key-container button:nth-child(20),
 .key-container button:nth-child(28) {
-  width: 65px;
+  width: 70px;
   color: black;
   // font-size: 1.6rem !important;
   // padding: 0;
