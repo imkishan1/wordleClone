@@ -287,7 +287,7 @@
   -webkit-backdrop-filter: blur(1px);
           backdrop-filter: blur(1px);
   padding: 1.3rem;
-  z-index: 1000;
+  z-index: 10000;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -367,6 +367,7 @@
   border-radius: 0.5rem;
   -webkit-animation: motionSize 0.3s alternate;
           animation: motionSize 0.3s alternate;
+  z-index: 10000;
 }
 
 .info-legend p {

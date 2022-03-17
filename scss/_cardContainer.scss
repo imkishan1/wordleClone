@@ -224,7 +224,7 @@
   backdrop-filter: blur(1px);
   padding:1.3rem;
   // padding-right: 2rem;
-  z-index: 1000;
+  z-index: 10000;
   top: 50%;
   left:50%;
   transform: translate(-50%, -50%);
@@ -232,6 +232,7 @@
   border-radius: 0.5rem;
   transition: 0.3s all ease-in-out;
   animation: motionSize 1s alternate;
+
   p {
     font-size: 1.6rem !important;
     word-spacing: 1px;
@@ -298,6 +299,7 @@
   border-radius: 0.5rem;
   // transition: 0.3s all ease-in-out;
   animation: motionSize 0.3s alternate;
+  z-index: 10000;
   p {
     font-size: 1.6rem !important;
     word-spacing: 1px;
