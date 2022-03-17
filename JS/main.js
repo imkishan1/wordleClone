@@ -21,6 +21,7 @@ let wordle;
 let meaning;
 let wordleMeaningText;
 let high_score = 0;
+let deltaScore=0;
 
 infoIcon.addEventListener('click', ()=> {
         legendInfo.style.display = 'block';
@@ -218,11 +219,12 @@ const checkRow = () => {
             card.classList.add('confeti');
             winAudio.play();
             var highSore1 = localStorage.getItem("HighScore");
-            
-            if(isNaN(sessionStorage.getItem("Score")))
-            {
-            sessionStorage.setItem("Score",0) 
-            }
+
+            // if(high_score == 0)
+            // {
+            //     sessionStorage.setItem("Score",0) 
+            // }
+            // deltaScore = parseInt(sessionStorage.getItem("Score"))+100;
             high_score = parseInt(sessionStorage.getItem("Score")) + 100;
             sessionScore(high_score);
             if(high_score>highSore1)
@@ -230,6 +232,11 @@ const checkRow = () => {
                 highestScore(high_score);
             }
             scoreHi.textContent = localStorage.getItem("HighScore")
+            if(isNaN(sessionStorage.getItem("Score")))
+            {
+                sessionStorage.setItem("Score",100)
+            }
+            scoreThis.textContent = high_score;
             scoreThis.textContent = sessionStorage.getItem("Score")
             showmessage('Woohoo! You Guessed it right 🥳')
             isGameOver = true;
