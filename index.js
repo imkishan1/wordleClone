@@ -5773,5 +5773,5 @@ const randomWord = () => {
   getMeaning(wordle);
 };
 randomWord();
-// console.log(wordle)
+console.log(wordle)
 

@@ -762,7 +762,7 @@ footer .links i:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 8px;
+  gap: 6px;
   font-size: 1.8rem;
   color: #fff;
 }
@@ -777,7 +777,7 @@ footer .links i:hover {
 }
 
 .scoreCard .scoreDetails .highestScore span .medal-silver {
-  font-size: 2.3rem;
+  font-size: 2.3rem !important;
   background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#797776));
   background: linear-gradient(to bottom, #e0e0e0 0%, #797776 100%);
   -webkit-background-clip: text;
