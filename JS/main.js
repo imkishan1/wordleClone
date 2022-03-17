@@ -315,8 +315,7 @@ function highestScore(score)
 
 function sessionScore(scr)
 {
+ 
     sessionStorage.setItem("Score",scr);
 }
 
-// sessionStorage.setItem("Score",0)
-// localStorage.removeItem("HighScore")
