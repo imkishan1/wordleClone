@@ -28,7 +28,6 @@ infoIcon.addEventListener('click', ()=> {
 })
 
 closeScore.addEventListener('click', ()=> {
-    console.log("clicked Close")
     scoreCard.style.display = 'none';
 })
 
